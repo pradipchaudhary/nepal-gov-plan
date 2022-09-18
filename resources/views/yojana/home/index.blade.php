@@ -44,18 +44,27 @@
                                 </div>
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_break_plan_count }} </h4>
-                                    <span> {{ ' टुक्राएको योजना ' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_break_plan_count }} </h4>
+                                        <span> {{ ' टुक्राएको योजना ' }} </span>
+                                    </div>
                                 </div>
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_plan_with_other_bibaran }} </h4>
-                                    <span> {{ ' सम्झौता भएको योजना ' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_plan_with_other_bibaran }} </h4>
+                                        <span> {{ ' सम्झौता भएको योजना ' }} </span>
+                                    </div>
                                 </div>
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_break_plan_with_other_bibaran }} </h4>
-                                    <span> {{ ' सम्झौता भएको टुक्राएको योजना ' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_break_plan_with_other_bibaran }} </h4>
+                                        <span> {{ ' सम्झौता भएको टुक्राएको योजना ' }} </span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -73,18 +82,27 @@
                             <div class="yojana-count">
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_program_regs_count }} </h4>
-                                    <span> {{ ' दर्ता कार्यक्रम' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_program_regs_count }} </h4>
+                                        <span> {{ ' दर्ता कार्यक्रम' }} </span>
+                                    </div>
                                 </div>
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_program_with_other_bibaran }} </h4>
-                                    <span> {{ ' सम्झौता भएको कार्यक्रम' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_program_with_other_bibaran }} </h4>
+                                        <span> {{ ' सम्झौता भएको कार्यक्रम' }} </span>
+                                    </div>
                                 </div>
                                 {{-- item --}}
                                 <div class="yojana-count-item">
-                                    <h4 class="count">{{ $total_work_order_count }} </h4>
-                                    <span> {{ ' सम्झौता भएको कार्यक्रम' }} </span>
+                                    <div class="icon"> <i class="fa-solid fa-question"></i> </div>
+                                    <div class="info">
+                                        <h4 class="count">{{ $total_work_order_count }} </h4>
+                                        <span> {{ ' सम्झौता भएको कार्यक्रम' }} </span>
+                                    </div>
                                 </div>
                             </div>
 

@@ -65,6 +65,7 @@
           <!-- Notifications Dropdown Menu -->
           <li class="nav-item dropdown">
               <a class="nav-link app-user" data-toggle="dropdown" href="#">
+                  <span>Welcome, {{ auth()->user()->name }} </span>
                   <i class="fa-solid fa-user"></i>
                   {{-- <span class="badge badge-warning navbar-badge"></span> --}}
               </a>

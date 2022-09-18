@@ -6,9 +6,14 @@
     --black: #000;
     --white: #fff;
 }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 /* ============================================
         :: Global CSS
 =============================================== */
+
+body {
+    font-family: "Open Sans", sans-serif !important;
+}
 /* Table  */
 table {
     border: 1px solid #000;
@@ -23,6 +28,7 @@ table tbody tr td {
 }
 p {
     font-size: 14px;
+    font-family: "Open Sans", sans-serif;
 }
 h1,
 h2,
@@ -124,78 +130,88 @@ main {
 } */
 
 /* ======================================
-    Yojana Dashboard
-=================================== */
-.yojana-dashboard .card .card-header h4.card-title {
-    font-size: 0.9rem;
-}
-.yojana-count {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.yojana-count-item {
-    background-color: #efefef;
-    width: calc(32% - 16px);
-    height: 75px;
-    margin: 8px;
-    border: 1px solid #ddd;
-    font-size: 13px;
-    box-shadow: 0 0 1px rgb(0 0 0 / 5%), 0 1px 3px rgb(0 0 0 / 5%);
-    display: flex;
-    /* padding: 10px; */
-}
-.yojana-count-item .icon {
-    width: 55px;
-    height: 100%;
-    background-color: rebeccapurple;
-    color: #fff;
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-}
-.yojana-count-item .info {
-    padding: 15px 30px;
-    float: left;
-}
-/* ======================================
         :: Sidebar
 =================================== */
-.sidebar ul.nav li.nav-item p {
-    font-size: 13px;
-}
-.nav-sidebar > .nav-item .nav-icon {
-    font-size: 12px;
-}
 .sidebar .user-panel .image img.gov-icon {
     width: 50px;
     min-width: 40px;
     max-width: 55px;
 }
+.sidebar .user-panel {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar .user-panel .info h5 {
+    font-size: 0.8rem;
+    color: #ffff00;
+    padding: 2px;
+    margin: 0px;
+}
 .sidebar .user-panel .info h4 {
     font-size: 1rem;
-    color: #fff;
-    padding: 0px;
+    color: #ffff00;
+    padding: 3px;
     margin: 0px;
+}
+.sidebar .user-panel .info p {
+    font-size: 0.7rem;
+    margin-top: -0px;
 }
 .sidebar .user-panel .info a {
     font-size: 0.7rem;
     margin-top: -2px;
     font-weight: 100;
     letter-spacing: 1px;
+    color: #fff;
 }
 [class*="sidebar-dark-"] {
     background-color: #00468f !important;
 }
 [class*="sidebar-dark"] .user-panel {
-    border-bottom: 1px solid #898989;
+    border-bottom: 1px solid #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+            to right,
+            rgb(0 70 143 / 70%),
+            rgb(0 70 143 / 78%)
+        ),
+        url(../dist/img/nepal-govt.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45%;
+}
+
+/* === menu === */
+.sidebar ul.nav li.nav-item p {
+    font-size: 13px;
+}
+.nav-sidebar > .nav-item i.nav-icon {
+    font-size: 13px;
+}
+.nav-sidebar > .nav-item i.fas,
+.nav-sidebar > .nav-item i.fas-solid {
+    font-size: 13px;
+}
+.nav-sidebar .nav-item > .nav-link {
+    margin-bottom: 0 rem;
+}
+.nav-sidebar .nav-item a {
+    margin-left: 5px;
 }
 /* ======================================
         :: Navbar
 =================================== */
 li.nav-item a.app-user {
+    display: flex;
+    align-items: center;
+}
+li.nav-item a.app-user span {
+    color: #007bff;
+}
+li.nav-item a.app-user i {
     font-size: 13px;
     width: 36px !important;
     height: 36px !important;
@@ -206,6 +222,7 @@ li.nav-item a.app-user {
     justify-content: center;
     align-items: center;
     padding: 0px !important;
+    margin-left: 8px;
 }
 
 .card {
@@ -213,3 +230,99 @@ li.nav-item a.app-user {
     margin-bottom: 1rem;
 }
 
+/* ======================================
+    Yojana Dashboard
+=================================== */
+.yojana-dashboard .card .card-header h4.card-title,
+.yojana-dashboard .card .card-header h3.card-title {
+    font-size: 14px;
+}
+.yojana-dashboard .card .card-header h4.card-title {
+    font-size: 0.9rem;
+}
+.yojana-count {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.yojana-count-item {
+    background-color: #fdecd4;
+    width: calc(32% - 16px);
+    /* height: 75px; */
+    margin: 10px;
+    font-size: 13px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 4%);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+    display: flex;
+    border-radius: 5px;
+    padding: 8px;
+}
+/* nth number yojan count item */
+.yojana-dashboard .yojana-count-item:nth-child(1) {
+    background-color: #007bff;
+}
+.yojana-dashboard .yojana-count-item:nth-child(2) {
+    background-color: #28a745;
+}
+.yojana-dashboard .yojana-count-item:nth-child(3) {
+    background-color: #00bbff;
+}
+.yojana-dashboard .yojana-count-item:nth-child(4) {
+    background-color: #ff6200;
+}
+.yojana-dashboard .yojana-count-item:nth-child(5) {
+    background-color: #a200ff;
+}
+.yojana-count-item .icon {
+    width: 55px;
+    height: 100%;
+    background-color: #606060;
+    color: #fff;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    display: none;
+}
+.yojana-count-item .info {
+    padding: 10px;
+    float: left;
+}
+.yojana-count-item .icon i {
+    font-size: 24px;
+}
+.yojana-count-item .info .count {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+@media all and (max-width: 1170px) {
+}
+@media all and (max-width: 940px) {
+    .yojana-count {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .yojana-count-item {
+        width: 100%;
+    }
+}
+@media all and (max-width: 728px) {
+}
+@media all and (max-width: 320px) {
+    .yojana-count {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .yojana-count-item {
+        width: 100%;
+    }
+}

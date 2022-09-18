@@ -4,27 +4,31 @@
      <div class="sidebar">
          <!-- Sidebar user panel (optional) -->
          <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
-             <div class="image">
+             {{-- <div class="image">
                  <img src="{{ asset('dist/img/nepal-govt.png') }}" class="gov-icon" alt="User Image">
-             </div>
+             </div> --}}
              <div class="info">
-                 <h4>
+                 <h5>
                      {{ config('constant.SITE_NAME') }}
-                 </h4>
-                 <a href="{{ route('yojana') }}" class="d-block">{{ auth()->user()->name }}</a>
+                 </h5>
+
+                 {{-- <a href="{{ route('yojana') }}" class="d-block">{{ auth()->user()->name }}</a> --}}
+                 <h4>{{ config('constant.SITE_SUB_TYPE') }}</h4>
+                 <p>{{ config('constant.FULL_ADDRESS') }}</p>
+                 {{-- {{ dd(auth()->user()) }} --}}
              </div>
          </div>
 
          <!-- Sidebar Menu -->
          <nav class="mt-2">
-             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                 data-accordion="false">
+             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                  <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
 
                  <li class="nav-item">
                      <a href="{{ route('budget-sources') }}" class="nav-link">
-                         <i class="nav-icon fas fa-money-bill"></i>
+                         {{-- <i class="nav-icon fas fa-money-bill"></i> --}}
+                         <i class="fa-solid nav-icon fa-money-check-dollar"></i>
                          <p>
                              {{ __('बजेट श्रोत') }}
                          </p>
@@ -32,7 +36,7 @@
                  </li>
                  <li class="nav-item">
                      <a href="{{ route('plan.index') }}" class="nav-link @yield('plan')">
-                         <i class="nav-icon fas fa-th"></i>
+                         <i class="fa-solid fa-holly-berry nav-icon"></i>
                          <p>
                              {{ __('योजना/कार्यक्रम') }}
                          </p>
@@ -40,7 +44,7 @@
                  </li>
                  <li class="nav-item">
                      <a href="{{ route('new-plan') }}" class="nav-link @yield('new_plan')">
-                         <i class="fa-solid fa-plus nav-icon"></i>
+                         <i class="fa-regular fa-square-plus nav-icon"></i>
                          <p>
                              {{ __('नयाँ योजना/कार्यक्रम दर्ता') }}
                          </p>
@@ -83,19 +87,19 @@
                      <ul class="nav nav-treeview">
                          <li class="nav-item ml-1">
                              <a href="{{ route('report.numerical') }}" class="nav-link @yield('report_numerical')">
-                                 <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa-solid fa-book nav-icon"></i>
                                  <p>{{ __('सङ्ख्यात्मक रिपोर्ट') }}</p>
                              </a>
                          </li>
                          <li class="nav-item ml-1">
                              <a href="{{ route('report.malepa') }}" class="nav-link @yield('report_malepa')">
-                                 <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa-solid fa-book nav-icon"></i>
                                  <p>{{ __('मलेप रिपोर्ट') }}</p>
                              </a>
                          </li>
                          <li class="nav-item ml-1">
                              <a href="{{ route('report.committee.dashboard') }}" class="nav-link @yield('report_comittee_dashboard')">
-                                 <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa-solid fa-book nav-icon"></i>
                                  <p>{{ __('समिति बिस्तृत विवरण') }}</p>
                              </a>
                          </li>
@@ -104,7 +108,7 @@
 
                  <li class="nav-item">
                      <a href="{{ route('setting.list') }}" class="nav-link @yield('setting_yojana')">
-                         <i class="fa-solid fa-gears nav-icon"></i>
+                         <i class="fa-solid fa-gear nav-icon"></i>
                          <p>
                              {{ __('मास्टर सेटिङ') }}
                          </p>
@@ -112,7 +116,7 @@
                  </li>
                  <li class="nav-item @yield('bhuktani_setting')">
                      <a href="#" class="nav-link">
-                         <i class="fa-solid fa-gears nav-icon"></i>
+                         <i class="fa-solid fa-gear nav-icon"></i>
                          <p>
                              {{ __('भुक्तानी सेटिङ्ग') }}
                              <i class="fas fa-angle-left right"></i>
@@ -122,7 +126,7 @@
                          <li class="nav-item ml-1">
                              <a href="{{ route('plan.setting.decimal_point.index') }}"
                                  class="nav-link @yield('bhuktani_setting_deciaml_point')">
-                                 <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa-solid fa-bars nav-icon"></i>
                                  <p>{{ __('Decimal Point') }}</p>
                              </a>
                          </li>
@@ -130,7 +134,8 @@
                  </li>
                  <li class="nav-item @yield('child_setting')">
                      <a href="#" class="nav-link">
-                         <i class="fa-solid fa-gears nav-icon"></i>
+                         {{-- <i class="fa-solid fa-gears nav-icon"></i> --}}
+                         <i class="fa-solid fa-gear nav-icon"></i>
                          <p>
                              {{ __('सेटिङ्ग') }}
                              <i class="fas fa-angle-left right"></i>
