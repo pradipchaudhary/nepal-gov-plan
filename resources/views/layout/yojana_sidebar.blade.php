@@ -4,24 +4,23 @@
      <div class="sidebar">
          <!-- Sidebar user panel (optional) -->
          <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
-             {{-- <div class="image">
+             <div class="image">
                  <img src="{{ asset('dist/img/nepal-govt.png') }}" class="gov-icon" alt="User Image">
-             </div> --}}
+             </div>
              <div class="info">
-                 <h5>
+                 <h4>
                      {{ config('constant.SITE_NAME') }}
-                 </h5>
-
+                 </h4>
+                 <span> {{ config('constant.FULL_ADDRESS') }} </span>
                  {{-- <a href="{{ route('yojana') }}" class="d-block">{{ auth()->user()->name }}</a> --}}
-                 <h4>{{ config('constant.SITE_SUB_TYPE') }}</h4>
-                 <p>{{ config('constant.FULL_ADDRESS') }}</p>
                  {{-- {{ dd(auth()->user()) }} --}}
              </div>
          </div>
 
          <!-- Sidebar Menu -->
          <nav class="mt-2">
-             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                 data-accordion="false">
                  <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
 

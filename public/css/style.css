@@ -132,6 +132,11 @@ main {
 /* ======================================
         :: Sidebar
 =================================== */
+/* [class*="sidebar-dark"] .user-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 .sidebar .user-panel .image img.gov-icon {
     width: 50px;
     min-width: 40px;
@@ -139,7 +144,8 @@ main {
 }
 .sidebar .user-panel {
     color: #fff;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar .user-panel .info h5 {
@@ -150,8 +156,8 @@ main {
 }
 .sidebar .user-panel .info h4 {
     font-size: 1rem;
-    color: #ffff00;
-    padding: 3px;
+    color: #fff;
+    padding: 1px;
     margin: 0px;
 }
 .sidebar .user-panel .info p {
@@ -165,23 +171,13 @@ main {
     letter-spacing: 1px;
     color: #fff;
 }
+.sidebar .user-panel .info span {
+    font-size: 0.7rem;
+    color: #c7c7c7;
+    margin-left: 7px;
+}
 [class*="sidebar-dark-"] {
     background-color: #00468f !important;
-}
-[class*="sidebar-dark"] .user-panel {
-    border-bottom: 1px solid #d1d1d1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(
-            to right,
-            rgb(0 70 143 / 70%),
-            rgb(0 70 143 / 78%)
-        ),
-        url(../dist/img/nepal-govt.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 45%;
 }
 
 /* === menu === */
@@ -209,7 +205,7 @@ li.nav-item a.app-user {
     align-items: center;
 }
 li.nav-item a.app-user span {
-    color: #007bff;
+    color: #000;
 }
 li.nav-item a.app-user i {
     font-size: 13px;
@@ -247,37 +243,40 @@ li.nav-item a.app-user i {
     justify-content: space-between;
 }
 .yojana-count-item {
-    background-color: #fdecd4;
-    width: calc(32% - 16px);
+    background-color: #efefef;
+    width: calc(49% - 8px);
     /* height: 75px; */
-    margin: 10px;
+    margin: 5px;
     font-size: 13px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 4%);
     transition: background 0.3s, border 0.3s, border-radius 0.3s,
         box-shadow 0.3s;
     display: flex;
-    border-radius: 5px;
-    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    /* padding: 8px 6px; */
 }
 /* nth number yojan count item */
-.yojana-dashboard .yojana-count-item:nth-child(1) {
+.yojana-dashboard .yojana-count-item:nth-child(1) > .icon {
     background-color: #007bff;
 }
-.yojana-dashboard .yojana-count-item:nth-child(2) {
+.yojana-dashboard .yojana-count-item:nth-child(2) > .icon {
     background-color: #28a745;
 }
-.yojana-dashboard .yojana-count-item:nth-child(3) {
+.yojana-dashboard .yojana-count-item:nth-child(3) > .icon {
     background-color: #00bbff;
 }
-.yojana-dashboard .yojana-count-item:nth-child(4) {
+.yojana-dashboard .yojana-count-item:nth-child(4) > .icon {
     background-color: #ff6200;
 }
-.yojana-dashboard .yojana-count-item:nth-child(5) {
+.yojana-dashboard .yojana-count-item:nth-child(5) > .icon {
     background-color: #a200ff;
 }
 .yojana-count-item .icon {
-    width: 55px;
-    height: 100%;
+    width: 60px;
+    min-width: 55px;
+    max-width: 70px;
+    /* height: 100%; */
     background-color: #606060;
     color: #fff;
     display: block;
@@ -285,7 +284,6 @@ li.nav-item a.app-user i {
     justify-content: center;
     align-items: center;
     float: left;
-    display: none;
 }
 .yojana-count-item .info {
     padding: 10px;
