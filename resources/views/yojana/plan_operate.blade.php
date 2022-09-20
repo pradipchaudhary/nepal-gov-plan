@@ -18,38 +18,38 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <ul class="users-list clearfix">
-                            <li class="card shadow-lg">
+                        <ul class="users-list plan-operates clearfix">
+                            <li class="card">
                                 <div class="d-flex justify-content-center">
                                     <img src="{{ asset('yojana/upabhokta-icon.png') }}" alt="User Image" class="img-fluid"
                                         width="50">
                                 </div>
                                 <a class="users-list-name mt-3 font-weight-bold"
-                                    href="{{route('plan-operate.search',['tole-bikas-samiti'])}}">{{ config('TYPE.1') . __(' मार्फत') }}</a>
+                                    href="{{ route('plan-operate.search', ['tole-bikas-samiti']) }}">{{ config('TYPE.1') . __(' मार्फत') }}</a>
                             </li>
-                            <li class="card shadow-lg">
+                            <li class="card">
                                 <div class="d-flex justify-content-center">
                                     <img src="{{ asset('yojana/upabhokta-icon.png') }}" alt="User Image" class="img-fluid"
                                         width="50">
                                 </div>
                                 <a class="users-list-name mt-3 font-weight-bold"
-                                    href="{{route('plan-operate.search',['upabhokta-samiti'])}}">{{ config('TYPE.2') . __(' मार्फत') }}</a>
+                                    href="{{ route('plan-operate.search', ['upabhokta-samiti']) }}">{{ config('TYPE.2') . __(' मार्फत') }}</a>
                             </li>
-                            <li class="card shadow-lg">
+                            <li class="card">
                                 <div class="d-flex justify-content-center">
                                     <img src="{{ asset('yojana/upabhokta-icon.png') }}" alt="User Image" class="img-fluid"
                                         width="50">
                                 </div>
                                 <a class="users-list-name mt-3 font-weight-bold"
-                                    href="{{route('plan-operate.search',['sanstha-samiti'])}}">{{ config('TYPE.3') . __(' मार्फत') }}</a>
+                                    href="{{ route('plan-operate.search', ['sanstha-samiti']) }}">{{ config('TYPE.3') . __(' मार्फत') }}</a>
                             </li>
-                            <li class="card shadow-lg">
+                            <li class="card">
                                 <div class="d-flex justify-content-center">
                                     <img src="{{ asset('yojana/upabhokta-icon.png') }}" alt="User Image" class="img-fluid"
                                         width="50">
                                 </div>
                                 <a class="users-list-name mt-3 font-weight-bold"
-                                    href="{{route('plan-operate.search',['amanat'])}}">{{ config('TYPE.4') . __(' मार्फत') }}</a>
+                                    href="{{ route('plan-operate.search', ['amanat']) }}">{{ config('TYPE.4') . __(' मार्फत') }}</a>
                             </li>
                         </ul>
                     </div>

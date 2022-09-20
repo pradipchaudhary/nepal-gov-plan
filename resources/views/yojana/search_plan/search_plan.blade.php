@@ -24,11 +24,12 @@
                     <div class="col-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">{{ config('TYPE.'.$type_id) . __(' मार्फत योजना खोज्नुहोस')}} </h3>
+                                <h3 class="card-title">{{ config('TYPE.' . $type_id) . __(' मार्फत योजना खोज्नुहोस') }}
+                                </h3>
                             </div>
-                            <form method="POST" action="{{route('plan-operate.searchSubmit')}}">
+                            <form method="POST" action="{{ route('plan-operate.searchSubmit') }}">
                                 @csrf
-                                <input type="hidden" value="{{$type_id}}" name="type_id">
+                                <input type="hidden" value="{{ $type_id }}" name="type_id">
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">योजनाको नाम / दर्ता फाराम नं:</label>

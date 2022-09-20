@@ -137,6 +137,7 @@ main {
     align-items: center;
     justify-content: center;
 } */
+
 .sidebar .user-panel .image img.gov-icon {
     width: 50px;
     min-width: 40px;
@@ -157,8 +158,9 @@ main {
 .sidebar .user-panel .info h4 {
     font-size: 1rem;
     color: #fff;
-    padding: 1px;
+    padding: 0px;
     margin: 0px;
+    margin-bottom: -2px;
 }
 .sidebar .user-panel .info p {
     font-size: 0.7rem;
@@ -174,12 +176,15 @@ main {
 .sidebar .user-panel .info span {
     font-size: 0.7rem;
     color: #c7c7c7;
-    margin-left: 7px;
+    margin-left: 0px;
 }
 [class*="sidebar-dark-"] {
     background-color: #00468f !important;
 }
 
+[class*="sidebar-dark"] .user-panel {
+    border-bottom: 1px solid #dbdbdb;
+}
 /* === menu === */
 .sidebar ul.nav li.nav-item p {
     font-size: 13px;
@@ -295,6 +300,29 @@ li.nav-item a.app-user i {
 .yojana-count-item .info .count {
     font-size: 20px;
     margin-bottom: 4px;
+}
+
+/* === Plan Operate === */
+.plan-operates {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.plan-operates .card {
+    width: calc(25% - 20px);
+    margin: 10px;
+    border: 1px solid #eee;
+    background-color: #f2c1b4;
+    padding: 15px 10px;
+}
+
+/* === Userlist li */
+.users-list > li {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    max-width: calc(25- 20px) !important;
+    margin: 5px;
 }
 
 @media all and (max-width: 1170px) {

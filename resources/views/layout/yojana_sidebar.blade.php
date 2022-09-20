@@ -21,12 +21,16 @@
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                  data-accordion="false">
-                 <!-- Add icons to the links using the .nav-icon class
-              with font-awesome or any other icon font library -->
-
+                 <li class="nav-item">
+                     <a href="{{ route('yojana') }}" class="nav-link">
+                         <i class="fa-solid fa-house nav-icon"></i>
+                         <p>
+                             {{ __('ड्यासबोर्ड') }}
+                         </p>
+                     </a>
+                 </li>
                  <li class="nav-item">
                      <a href="{{ route('budget-sources') }}" class="nav-link">
-                         {{-- <i class="nav-icon fas fa-money-bill"></i> --}}
                          <i class="fa-solid nav-icon fa-money-check-dollar"></i>
                          <p>
                              {{ __('बजेट श्रोत') }}
